@@ -27,7 +27,7 @@ Here, we are using the Python programming language and pytesseract google librar
 #### Workflow
 
 
-![image](https://github.com/user-attachments/assets/f7d8e756-6419-483f-a360-3acc31dd5807)
+![image](https://github.com/user-attachments/assets/2256c62f-24b2-45f0-884e-7dee0e1b5d4f)
 
 
 #### PDF to Image Convertor
@@ -38,18 +38,64 @@ Useing pdf2image library for converting PDF to image
 
 extracted data was not as expected.
 
+
+![dark_image](https://github.com/user-attachments/assets/dd3d3c12-ab42-4109-a44d-6558a5418dfb)
+
+
 #### Extracted data from the above image
+  Dr John Smith, M.D
+  2 Non-Important Street,
+  New York, Phone (000)-111-2222
+
+  Name: Maria Sharapova Date: 5/11/2022
+
+  Address: 9 tennis court, new Russia, DC
+
+  —momennannenncmneneunnmnnnnninsissiyoinnitnahaadaanih issn earnttneenrenen:
+
+  Prednisone 20 mg
+  Lialda 2.4 gram
+
+  3 days,
+
+  or 1 month
+
+#### Image Processing
 
 We decided to preprocess the images using the OpenCV module before extracting data from them. As part of this process, we first applied normal thresholding, which resulted in the image shown below.
+
+![image](https://github.com/user-attachments/assets/2f64021f-5fba-4fa1-b171-132e8fad4393)
+
 
 
 So, if there is any shadow or some noise, the normal thresholding fade out the area. which will result in loss of data.
 
 In the search of better approach of this problem, we have decided to use adaptive thresholding technique. In this technique, the image will be divided into sub image and the thresholding value will be different for all sub regions. And the end result of adaptive thresholding is much better compared to normal thresholding.
 
+
+![image](https://github.com/user-attachments/assets/a81461bd-5f35-45d6-97de-9fffcd296a91)
+
+
 #### After preprocessing the image data extraction
 
-
+  Dr John Smith, M.D
+  2 Non-Important Street,
+  New York, Phone (000)-111-2222
+  
+  Name: Marta Sharapova Date: 5/11/2022
+  
+  Address: 9 tennis court, new Russia, DC
+  
+  K
+  
+  Prednisone 20 mg
+  Lialda 2.4 gram
+  
+  Directions:
+  
+  Prednisone, Taper 5 mg every 3 days,
+  Finish in 2.5 weeks a
+  Lialda - take 2 pill everyday for 1 month
 
 #### Notebook
 
