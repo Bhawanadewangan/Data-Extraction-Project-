@@ -32,7 +32,7 @@ Here, we are using the Python programming language and pytesseract google librar
 
 #### PDF to Image Convertor
 
-Useing pdf2image library for converting PDF to image
+Using pdf2image library for converting PDF to image
 
 #### Without Preprocessing Extracted Data
 
